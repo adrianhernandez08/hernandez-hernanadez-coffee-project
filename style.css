@@ -1,3 +1,25 @@
+.main-container{
+    border-style: solid;
+    background-color: lightblue;
+    margin: 2em;
+}
+
+.navbar {
+    background-color: rosybrown;
+}
+
+#searchBox{
+    width: 100%;
+}
+
+#input-submit {
+    width: 100%;
+    background: royalblue;
+}
+#input-name{
+    width: 100%;
+    background: lightgreen;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +28,15 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.col{
+    justify-content: center;
+    margin: 1em;
+
+}
+
+#coffees {
+    margin: 2em;
+    border-style: transparent;
 }

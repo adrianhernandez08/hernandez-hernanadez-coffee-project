@@ -1,8 +1,25 @@
 "use strict"
 
+
+function coffeefunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    var html = '<div class="coffee d-block col-4 mx-auto p-auto">';
+    var html = '<div class="coffees">';
     html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
@@ -77,17 +94,18 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+document.write(coffees.id, coffees.name, coffees.roast)
 
-var tbody = document.querySelector('#coffees');
+// var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 submitButton.addEventListener('click', updateCoffees);
-}
+
 
 var searchBox = document.querySelector("#searchBox");
 searchBox.addEventListener("keyup", searchCoffees);
 var submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", updateCoffees);
 var addCoffeeButton = document.querySelector("#input-submit");
-addCoffeeButton.addEventListener("click", addCoffees)
+addCoffeeButton.addEventListener("click", addCoffees);
