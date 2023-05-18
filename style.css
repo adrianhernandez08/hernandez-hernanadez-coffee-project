@@ -2,7 +2,7 @@
 
 .main-container{
     border-style: solid;
-    background-color: lightblue;
+    background-color: transparent;
     margin: 2em;
 }
 .img-thumbnail {
@@ -12,20 +12,15 @@
 }
 
 .navbar {
-    background-color: lightcoral;
+    background-color: transparent;
+    opacity: 50%;
+    font-size: 48px;
+
 }
 
 #searchBox{
     width: 100%;
-}
 
-#input-submit {
-    width: 100%;
-    background: royalblue;
-}
-#input-name{
-    width: 100%;
-    background: lightgreen;
 }
 table {
     border-collapse: collapse;
@@ -38,7 +33,19 @@ td, th {
 }
 
 .boxofmilk{
-    background-color: lightgreen;
+    background-color: transparent;
+    font-family: "Sofia", sans-serif;
+
+
+}
+.sugar{
+    background-color: transparent;
+    font-family: "Sofia", sans-serif;
+
+}
+.extras {
+    background-color: transparent;
+    font-family: "Sofia", sans-serif;
 
 }
 
@@ -81,4 +88,13 @@ td, th {
 
 #myUL li a:hover:not(.header) {
     background-color: #eee;
+}
+
+body{
+    background-image: url("img/redbrick.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'bebas neue', serif;
+    text-shadow: 4px 4px 4px #aaa;
 }

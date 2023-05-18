@@ -5,7 +5,7 @@ function myFunction() {
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("coffees");
+    li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
@@ -38,6 +38,9 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    if (selectedRoast === "all") {
+        filteredCoffees.push(updateCoffees())
+    }
     // var selectedName = submitSearch.value;
 
     coffees.forEach(function(coffee) {
