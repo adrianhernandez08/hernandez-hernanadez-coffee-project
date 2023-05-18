@@ -30,6 +30,7 @@
     <div class="container text-center">
         <div class="row">
             <div class="col">
+                <h2>1. Search for your favorite coffee?</h2>
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search your favorite coffee.." title="Type in a name">
                 <ul id="myUL">
                             <li><a href="#1">Light City</a></li>
@@ -50,10 +51,7 @@
             </div>
             <div class="col">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
-                <h2>1. How would you like your coffee?</h2>
-                <div id="coffees" class="container"></div>
-            </div>
-            <div class="col">
+                <h2>2. How would you like your coffee?</h2>
                 <form>
                     <select id="roast-selection">
                         <option>all</option>
@@ -63,9 +61,25 @@
                     </select>
                     <input id="submit" type="submit" />
                 </form>
+                <div id="coffees" class="container"></div>
             </div>
             <div class="col">
-                <h2>can't find what you're looking for?</h2>
+                <h2>3. Want to make your own coffee?</h2>
+                <div class="boxofmilk">
+                <h5>Types of milk</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        1/2 and 1/2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        milk
+                    </label>
+                    </div>
+                </div>
             </div>
     <script src="main.js"></script>
             </div>
