@@ -1,5 +1,7 @@
 "use strict"
 
+
+//inhouse brews function//
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -18,9 +20,9 @@ function myFunction() {
 }
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffees">';
-    html += '<h4>' + coffee.name + '</h4>';
-    html += '<h5>' + coffee.roast + '</h5>';
+    var html = '<div class="coffees col-5">';
+    html += '<span class="fs-3">' + coffee.name + '</span>';
+    html += '<span class="fs-5">' + coffee.roast + '</span>';
     html += '</div>';
 
     return html;
@@ -33,13 +35,13 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+//update coffees based on roast selection
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     if (selectedRoast === "all") {
-        filteredCoffees.push(updateCoffees())
+        filteredCoffees = coffees;
     }
     // var selectedName = submitSearch.value;
 
@@ -52,20 +54,7 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
-function updateSearched (e) {
-    e.preventDefault();
-
-    var selectedName = submitSearch.value;
-    var filteredCoffees = [];
-    coffees.forEach(function (coffee) {
-        if (coffee.name === selectedName) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
+// coffees period//
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -85,16 +74,27 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var submitSearch = document.querySelector('#searchName');
-var submitName = document.querySelector('#submit-name');
-
 
 
 
 tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
-submitName.addEventListener('click', updateSearched);
+roastSelection.addEventListener('change', updateCoffees);
 submitSearch.addEventListener('input', updateSearched);
+
+
+// Tabbed Menu Items
+function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();

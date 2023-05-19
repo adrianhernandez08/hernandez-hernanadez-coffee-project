@@ -1,100 +1,27 @@
 
 
-.main-container{
-    border-style: solid;
-    background-color: transparent;
-    margin: 2em;
-}
-.img-thumbnail {
-    width: 50%;
-    height: 50%;
-
-}
-
-.navbar {
-    background-color: transparent;
-    opacity: 50%;
-    font-size: 48px;
-
-}
-
-#searchBox{
-    width: 100%;
-
-}
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
-.boxofmilk{
-    background-color: transparent;
-    font-family: "Sofia", sans-serif;
-
-
-}
-.sugar{
-    background-color: transparent;
-    font-family: "Sofia", sans-serif;
-
-}
-.extras {
-    background-color: transparent;
-    font-family: "Sofia", sans-serif;
-
-}
-
-#coffees {
-    margin: 2em;
-    border-style: transparent;
-}
-
 * {
     box-sizing: border-box;
 }
-
-#myInput {
-    background-image: url('img/searchicon.png');
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    margin: 2em;
 }
 
-#myUL {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#myUL li a {
-    border: 1px solid #ddd;
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    display: block
-}
-
-#myUL li a:hover:not(.header) {
-    background-color: #eee;
-}
-
-body{
-    background-image: url("img/redbrick.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.bgimg {
     background-position: center;
-    font-family: 'bebas neue', serif;
-    text-shadow: 4px 4px 4px #aaa;
+    background-size: contain;
+    background-image: url("/img/background.png");
+    min-height: 50%;
 }
+
+.menu {
+    display: none;
+}
+
+.w3-row {
+    padding: 8px 8px 16px 16px;
+    text-decoration-color: black;
+}
+
