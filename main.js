@@ -2,7 +2,7 @@
 
 
 //inhouse brews function//
-function myFunction() {
+function coffeeSearchFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
